@@ -2,12 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 
 // Configura o express para ler JSON no corpo das requisições
 app.use(bodyParser.json());
+app.use(cors());
 
 // Cria (ou abre) o banco SQLite na pasta atual
 const db = new sqlite3.Database(path.resolve(__dirname, 'comentarios.db'), (err) => {
@@ -63,5 +65,5 @@ app.get('/comentarios', (req, res) => {
 
 // Inicia o servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em https://silvajardim.github.io/100anos/`);
 });

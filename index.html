@@ -618,22 +618,46 @@ footer {
                   margin: 0 12px 0 0;
                   cursor: pointer;
                 }
-              </style>
-            </head>
-            <body>
-              <button id="toggleAbas">Abrir Todas as Abas</button>
-              <ul id="abasMenu" class="abas-menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre-site">Sobre o Site</a></li>
-                <li><a href="#historia">História</a></li>
-                <li><a href="#legado">Legado</a></li>
-                <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#documentos">Documentos</a></li>
-                <li><a href="#fontes">Fontes</a></li>
-                <li><a href="#comentarios">Comentários</a></li>
-              </ul>
+                </style>
+                </head>
+                <body>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;">
+                  <button id="toggleAbas" style="background: linear-gradient(90deg, #00bfff 0%, #005bea 100%); color: #fff; border: none; padding: 12px 22px; border-radius: 10px; font-weight: bold; margin: 0 12px 0 0; cursor: pointer; box-shadow: 0 2px 12px #00bfff55; font-size: 1.08rem; letter-spacing: 1px; transition: background 0.2s, box-shadow 0.2s;">Abrir Todas as Abas</button>
+                </div>
+                <ul id="abasMenu" class="abas-menu" style="background: linear-gradient(90deg, #00bfff 0%, #005bea 100%); border-radius: 12px; box-shadow: 0 4px 24px #00bfff33; padding: 10px 8px;">
+                  <li><a href="#inicio" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Início</a></li>
+                  <li><a href="#sobre-site" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Sobre o Site</a></li>
+                  <li><a href="#historia" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">História</a></li>
+                  <li><a href="#legado" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Legado</a></li>
+                  <li><a href="#linha-do-tempo" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Linha do Tempo</a></li>
+                  <li><a href="#depoimentos" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Depoimentos</a></li>
+                  <li><a href="#galeria" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Galeria</a></li>
+                  <li><a href="#documentos" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Documentos</a></li>
+                  <li><a href="#fontes" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Fontes</a></li>
+                  <li><a href="#comentarios" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Comentários</a></li>
+                </ul>
+                <style>
+                .abas-menu a,
+                .abas-menu a:visited {
+                  color: #fff !important;
+                  background: #00bfff !important;
+                  border-radius: 8px;
+                  margin: 0 2px;
+                  font-weight: 600;
+                  transition: background 0.2s, color 0.2s;
+                }
+                .abas-menu a:hover, .abas-menu a:focus {
+                  background: #fff !important;
+                  color: #005bea !important;
+                  box-shadow: 0 0 8px #00bfff88;
+                  outline: none;
+                }
+                #toggleAbas:hover, #toggleAbas:focus {
+                  background: linear-gradient(90deg, #005bea 0%, #00bfff 100%);
+                  box-shadow: 0 4px 24px #005bea55;
+                  outline: none;
+                }
+                </style>
             
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
@@ -714,36 +738,33 @@ footer {
           <button class="tab-button active" data-tab="cap1">Capítulo 1</button>
           <button class="tab-button" data-tab="cap2">Capítulo 2</button>
           <button class="tab-button" data-tab="cap3">Capítulo 3</button>
-          <button class="tab-button" data-tab="cap4">Capítulo 4</button>
-          <button class="tab-button" data-tab="cap5">Capítulo 5</button>
         </div>
         <div class="tab-contents">
           <div class="tab-content active" id="cap1">
             <img src="https://i0.wp.com/www.osaqua.com.br/wp-content/uploads/2021/05/Antonio-da-Silva-Jardim-Histituto-Historico-e-Geografico-de-Santos.jpg?resize=200%2C350" alt="Antonio da Silva Jardim dressed formally in a dark suit and white shirt, facing forward with a neutral expression. The background is plain and muted, focusing attention on the subject. The overall tone is serious and historical, evoking a sense of respect and remembrance.">
             <h3>Bibliografia</h3>
-            <p>   Ele nasceu na vila de Nossa Senhora da Lapa de Capivari, que atualmente é a sede do município que hoje leva seu nome. Era filho de Gabriel da Silva Jardim e de Dona Felismina Leopoldina de Mendonça, neto por parte de pai de Antônio da Silva Jardim e de sua esposa Dona Luciana Maria, e por parte de mãe de Leandro Freire Ribeiro e sua esposa Dona Lauriana Leopoldina do Amor Divino. Seu pai foi um humilde educador em Capivari, se dedicando ao ensino em sua própria propriedade.</p>
-            <p>   Enviado a Niterói para avançar em sua educação, começou seus estudos no colégio Silva Pontes. Posteriormente, passou a estudar no Colégio de São Bento, onde aprendeu português, francês, geografia e latim. Durante esse período, ajudou a fundar um periódico estudantil chamado "O laboro literário", que marcou o início de sua trajetória política e seu ativismo pela liberdade.</p>
-            <p>   Por enfrentar dificuldades financeiras, pois seu pai não tinha muitos recursos, ele mudou de residência e escola, ingressando no externato Jasper. Buscou um emprego para cobrir seus custos acadêmicos e, após algumas posições de menor relevância, foi convocado para trabalhar no externato. Mudou-se para São Paulo e ingressou na Faculdade de Direito de São Paulo. Logo, se envolveu no ambiente político da faculdade, onde as discussões sobre ideias republicanas e a abolição da escravatura eram frequentes.</p>
-            <p>   Ainda jovem, teve contato com a família do Conselheiro Martim Francisco de Andrada, que era muito influente na sociedade paulista. Foi na família liberal de Martim Francisco que Silva Jardim conheceu sua futura esposa, Ana Margarida, filha do político brasileiro Conselheiro Martin Francisco Ribeiro de Andrada, que era neto de José Bonifácio de Andrada e Silva, e filho de Ana Benvinda Bueno de Andrada, descendente de Amador Bueno, capitão-mor. Com Ana Margarida, ele teve quatro filhos, sendo um deles nomeado em sua homenagem.</p>
-            <p>   Ele se dedicou intensamente à campanha republicana, chegando a vender seu escritório de advocacia e dissolver sua sociedade com Martim Francisco. Sua vida passou a girar em torno de comícios em apoio à república e em viagens frequentes entre os estados do Rio de Janeiro, São Paulo e Minas Gerais. Durante sua militância, ele foi aclamado, apedrejado, perseguido e elogiado.</p>
-            <p>   Sua saúde, que sempre foi delicada devido ao impaludismo desde a infância, sofria com esse estilo de vida agitado, mas isso não impediu seu contínuo engajamento político. Com a declaração da república, o exército o deixou de lado. Ele se candidatou para o congresso no Distrito Federal, mas foi derrotado. Assim, decidiu se afastar da política e viajar para o exterior, buscando descanso, clareza mental e novas experiências.</p>
-            <p>   Aos 30 anos, visitou Pompeia, na Itália, e, por sua curiosidade em conhecer o vulcão Vesúvio, mesmo sendo alertado sobre a possibilidade de uma erupção, acabou sendo tragado por uma fenda que se abriu na cratera da montanha, sem que se soubesse se foi um acidente ou um ato intencional.</p>
-            <p>   Conforme uma reportagem do jornal "A Pátria Mineira", datada de 30 de julho de 1891, na cidade de São João del-Rei, acessível através do site do Arquivo Público Mineiro, a morte de Silva Jardim foi considerada um acidente, testemunhado por um guia e seu amigo Joaquim Carneiro de Mendonça. Segundo o relato, o jornalista teria sido engolido por uma fenda próxima ao Vesúvio, mas conseguiu se salvar, ferindo-se no processo, enquanto Carneiro de Mendonça foi socorrido pelo guia local. O jornal cita a origem das informações como "Carta Parisiense", de Xavier de Carvalho, enviada ao "País".</p>
-            <p>   Em homenagem ao falecido jornalista, o município fluminense de Capivari, que faz fronteira com Araruama e Rio Bonito, recebeu o nome atual de Silva Jardim.</p>
+            <p>   Antônio da Silva Jardim foi um proeminente advogado, jornalista e ativista político brasileiro, amplamente reconhecido por seu envolvimento ativo nos movimentos pela abolição da escravatura e pela implantação da república. Ele defendia que tanto a Abolição quanto a República deveriam engendrar mudanças significativas para toda a sociedade brasileira.
+
+Ele nasceu na vila de Nossa Senhora da Lapa de Capivari, que atualmente é o município que leva seu nome, no estado do Rio de Janeiro. Filho de Gabriel da Silva Jardim, um educador humilde que lecionava em sua própria propriedade, e de Felismina Leopoldina de Mendonça, vinha de uma família simples, mas marcada por valores sólidos. Por parte de pai, era neto de Antônio da Silva Jardim e Dona Luciana Maria; por parte de mãe, de Leandro Freire Ribeiro e Dona Lauriana Leopoldina do Amor Divino.
+
+Buscando uma educação mais avançada, foi enviado a Niterói, onde estudou nos colégios Silva Pontes e São Bento. Ali, aprendeu português, francês, geografia e latim. Durante esse período, ajudou a fundar o jornal estudantil O Laboro Literário, que marcou o início de sua militância política em defesa da liberdade e da justiça.
+
+Com poucos recursos financeiros, enfrentou grandes desafios durante sua trajetória acadêmica. Mudou-se para o Externato Jasper, onde também passou a trabalhar para custear os estudos. Determinado, seguiu para São Paulo e ingressou na tradicional Faculdade de Direito de São Paulo, onde se engajou nas discussões políticas da época, especialmente nas ideias republicanas e na luta abolicionista.
+
+Durante sua juventude, aproximou-se da influente família do Conselheiro Martim Francisco de Andrada. Foi nesse meio que conheceu Ana Margarida, com quem se casou. Ela era neta do Patriarca da Independência, José Bonifácio de Andrada e Silva. O casal teve quatro filhos, incluindo um que recebeu o nome do pai como homenagem.
+
+Movido por seus ideais, Silva Jardim abandonou a advocacia, vendeu seu escritório e dissolveu sua sociedade para se dedicar integralmente à causa republicana. Viajou intensamente entre os estados do Rio de Janeiro, São Paulo e Minas Gerais, participando de comícios, escrevendo, discursando e enfrentando tanto aclamações quanto perseguições.
+
+Mesmo com a saúde fragilizada desde a infância por causa do paludismo, manteve-se firme em sua militância. Após a Proclamação da República, no entanto, foi ignorado pelos militares que assumiram o poder. Tentou se eleger deputado, mas não teve sucesso. Desencantado, afastou-se da política e buscou descanso e novas experiências na Europa.
+
+Em 1891, aos 30 anos, durante uma visita a Pompeia, na Itália, decidiu explorar o vulcão Vesúvio. Apesar dos alertas sobre possíveis riscos, foi tragado por uma fenda que se abriu repentinamente na cratera. Sua morte permanece envolta em mistério — não se sabe ao certo se foi um acidente ou um ato deliberado.
+
+De acordo com reportagem do jornal A Pátria Mineira, publicada em 30 de julho de 1891, em São João del-Rei, o episódio foi testemunhado por um guia e seu amigo Joaquim Carneiro de Mendonça. A matéria, baseada na “Carta Parisiense” de Xavier de Carvalho, relata que Silva Jardim chegou a tentar escapar, mas ficou ferido, enquanto Carneiro foi socorrido por um guia local.
+
+Como homenagem a seu legado, o antigo município de Capivari passou a se chamar Silva Jardim — um tributo eterno a uma vida dedicada à liberdade, à justiça social e à transformação do Brasil.</p>
             <ul></ul>
           </div>
           <div class="tab-content" id="cap2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Brasão_de_Silva_Jardim.png" alt="Imagem representando o Legado" style="max-width:120px; height:auto; display:block; margin:0 auto;">
-            <h3>Antônio Silva Jardim</h3>
-            <p>   Antônio da Silva Jardim foi um proeminente advogado, jornalista e ativista político brasileiro, amplamente reconhecido por seu envolvimento ativo nos movimentos pela abolição da escravatura e pela república. Ele defendia que tanto a Abolição quanto a República deveriam engendrar mudanças significativas para toda a sociedade brasileira.</p>
-            <p>   Nascido em 18 de agosto de 1860, na antiga vila de Capivari — hoje Silva Jardim, no estado do Rio de Janeiro — era filho de Gabriel da Silva Jardim, um modesto agricultor e professor de ensino básico, e de Felismina Leopoldina de Mendonça. Iniciou sua educação na escola criada por seu pai e, posteriormente, foi enviado a Niterói, onde estudou no Colégio Silva Pontes e no Mosteiro de São Bento, aprendendo disciplinas como português, francês, geografia e latim.</p>
-            <p>   Durante sua adolescência, criou o jornal escolar <em>O Laboro Literário</em>, onde iniciou sua militância política em favor da liberdade. Diante de dificuldades financeiras, precisou mudar de residência e escola, matriculando-se no Externato Jasper, onde também trabalhou para custear seus estudos. Mais tarde, com o apoio do pai, mudou-se para São Paulo e ingressou na famosa Faculdade de Direito de São Paulo, em 1878.</p>
-            <p>   Na universidade, envolveu-se intensamente com os ideais republicanos e com a causa abolicionista, fundando o Clube Republicano Acadêmico. Abandonou a carreira de advogado, vendeu seu escritório e rompeu a sociedade com Martim Francisco para dedicar-se exclusivamente à propaganda republicana. Passou a viajar frequentemente entre os estados do Rio de Janeiro, São Paulo e Minas Gerais, participando de comícios e disseminando as ideias republicanas.</p>
-            <p>   Sua trajetória foi marcada por momentos de reconhecimento, mas também de perseguições. Mesmo com a saúde debilitada por causa do paludismo contraído na infância, manteve-se ativo até a Proclamação da República. No entanto, com a ascensão do regime republicano, foi ignorado pelos militares, que não valorizaram os esforços dos civis. Tentou se eleger deputado no Distrito Federal, mas não obteve sucesso, afastando-se então da política.</p>
-            <p>   Buscando descanso e novas experiências, viajou para a Europa. Em 1891, durante uma visita a Pompeia, na Itália, decidiu explorar o vulcão Vesúvio. Apesar dos alertas sobre o risco de erupção, aproximou-se da cratera e foi tragado por uma fenda que se abriu repentinamente. Sua morte, aos 30 anos, permanece envolta em mistério — não se sabe ao certo se foi um acidente ou um ato deliberado. De qualquer forma, sua morte simbolizou o fim de uma vida inteiramente dedicada à liberdade, à justiça social e à transformação do Brasil.</p>
-            <ul></ul>
-          </div>
-          <div class="tab-content" id="cap3">
             <img src="https://i.pinimg.com/originals/69/f6/9a/69f69aaf7ee3490099873f30eb7bd33f.jpg" alt="Imagem representando o Legado">
             <h3>História do município e da fundação da Escola Silva Jardim</h3>
             <p>   Nos anos 1920 a educação pública ainda chegava lentamente aos bairros periféricos de São Paulo. A reforma educacional de 1920 em SP incluiu um recenseamento escolar para identificar o analfabetismo infantil. Na prática, o Tucuruvi era área rural até por volta de 1918 e só então passou a ver surgirem instituições públicas: igrejas, cinemas e escolas públicas começaram a aparecer gradualmente na região.</p>
@@ -771,15 +792,7 @@ footer {
             <p>   Seu nome atual é uma homenagem ao jornalista e político fluminense Antônio da Silva Jardim. Anteriormente o município chamava-se Capivari, cuja fundação se deu em 1801, nas terras de D. Maria Rodrigues, viúva de Manoel da Silveira Azevedo, onde o casal havia construído uma capela em devoção à Sant’Ana. A viúva doou a capela e seu entorno, para a criação da paróquia de Nossa Senhora da Lapa de Capivari, a pedido da população local. No entorno da capela formou-se o vilarejo, que posteriormente foi elevado à categoria de freguesia, e mais adiante à categoria de vila, por decreto de 1841, separando-se definitivamente do município de Cabo Frio. A condição imposta para o desmembramento, era de que alguns fazendeiros locais se responsabilizassem e construíssem uma câmara, que executava as mesmas funções atuais de uma prefeitura, bem como uma cadeia para a nova vila. O Major Joaquim Fernandes Lopes Ramos, o Alferes Luiz Gomes da Silva Leite, juntamente com alguns membros da família Pinto Coelho, executaram as construções entre os anos de 1841 e 1843, atendendo assim às exigências. A partir do ano de 1943, a vila de Capivari teve seu nome modificado para Silva Jardim, denominação esta que perdura até os dias atuais.</p>
             <ul></ul>
           </div>
-          <div class="tab-content" id="cap4">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDJZUvdwrM1wKDALXiQ3nqV65uSs7Ig1Ck-e3Usti8s2_RDjs4lXGkv6zv5KBbp662RM&usqp=CAU">
-            <h3>Fim de Antônio Silva Jardim (morte)</h3>
-            <p>   De acordo com reportagem do jornal A Pátria Mineira, de 30 de julho de 1891, da cidade de São João del Rei, acessível por meio do sítio do Arquivo Público Mineiro, a morte de Silva Jardim teria sido um acidente, testemunhado por um guia e por seu amigo Joaquim Carneiro de Mendonça. Segundo o relato, o jornalista teria sido engolido por uma fenda junto ao Vesúvio, do que se salvou, ferindo-se, Carneiro de Mendonça, que fora auxiliado pelo guia local. O jornal menciona como fonte das informações a Carta Parisiense, de Xavier de Carvalho, dirigida ao Paiz.</p>
-            <p>   Após a proclamação da República, Silva Jardim afastou-se da vida política e viajou para a Europa. Em 1º de julho de 1891, enquanto visitava o vulcão Vesúvio, na Itália, foi tragado por uma fenda que se abriu na cratera, falecendo aos 30 anos. Há controvérsias sobre se sua morte foi acidental ou um ato voluntário, mas sua partida prematura marcou o fim de uma vida dedicada à luta por liberdade e justiça.</p>
-            <p>   Em homenagem ao jornalista morto, foi determinado que o município fluminense de Capivari, vizinho a Araruama e Rio Bonito, passasse a ter o atual nome de Silva Jardim.</p>
-            <ul></ul>
-          </div>
-          <div class="tab-content" id="cap5">
+          <div class="tab-content" id="cap3">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2gBQHP3jEARAoaENwX8BTR6DqHqZ-4GXs_YPXaDUFm3kCjaHc2SC-WnF-gy432u_2f_Q&usqp=CAU"
               alt="Grupo de estudantes reunidos em frente ao prédio da escola Silva Jardim, sorrindo e conversando em clima descontraído, com árvores e parte da fachada da escola ao fundo, atmosfera alegre e de companheirismo"
               style="max-width: 300px; height: auto; display: block; margin: 0 auto;" loading="lazy" referrerpolicy="no-referrer">
@@ -965,7 +978,7 @@ footer {
         </figure>
         <!-- Foto 3 -->
         <figure>
-          <img src="https://scontent.fcgh10-1.fna.fbcdn.net/v/t39.30808-6/491806319_3818047765112622_7898157423830332446_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bjcajY7pHAAQ7kNvwHtuf2x&_nc_oc=Adk_O4pfe9Gdt4ei-1vBJRF7N4_nMZzoIrOijAWTDhiA-a00A7qSkEe2_GT971d4hCs&_nc_zt=23&_nc_ht=scontent.fcgh10-1.fna&_nc_gid=BGJclvCsDjuwuxMMv40BbA&oh=00_AfIzCZaRZgEPPdTz4MHLk4ADIXivryspZnVn12ttcgJ7EQ&oe=6840F97E"
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKvQtSkBwYG3Z-HoKY2Pft_EnfRQDVh6ptzQ&s"
             alt="Retrato de Antonio da Silva Jardim, patrono da escola.">
         </figure>
         <!-- Foto 4 -->
@@ -1042,7 +1055,7 @@ footer {
       <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
         <!-- Documento 1 -->
         <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;"></figure>
-          <img src="https://scontent.fcgh10-1.fna.fbcdn.net/v/t1.6435-9/116893695_2576750455909032_122779442581246618_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFVsszexliLAoqVs8J1xemQlG-RaTBCTBmUb5FpMEJMGY7gv7SHCCro9mNmvFhLEqMH-YliQeDapVXrqGIaZNg_&_nc_ohc=BmWXt4GFJI0Q7kNvwF-Xc8h&_nc_oc=AdnhMJpbvgzXDAo8NP49kSfNAcrchrr_jmTpHPvIGgq11XnHqyxiP9U-nCNiJhJ8tNk&_nc_zt=23&_nc_ht=scontent.fcgh10-1.fna&_nc_gid=0FSKJUXtnVUCDwXpKoUlFA&oh=00_AfLciT8QfbTPLhirBQfucU4BUQRy3i9NpZ3CfNx32P7gjw&oe=6856E457"
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSnkoBL_koEQh3W7kZlQDpu1ztitBImfQvEz0VLjI5UXoHENu9xif6d5vU56Z7rgLq-T08nXne2kIRIbE-e9IC3NFmD6xx2T4o1SthjmbVoPzRUESfWfUzSXwtTze7Mvd0QS-S5Sw7-Za4/s1600/Tucuruvy03.jpg"
             alt="Recorte de jornal antigo"
             style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
             loading="lazy" referrerpolicy="no-referrer">
@@ -1050,7 +1063,7 @@ footer {
         </figure>
         <!-- Documento 2 -->
         <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;"></figure>
-          <img src="https://scontent.fcgh10-1.fna.fbcdn.net/v/t1.6435-9/116849661_2575993879318023_8228171436817108455_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEnpMrVBbqGdnp7KDAwWwDazuQnBMSY-6jO5CcExJj7qA3ozzTXFP4yMWQVvtoTffol7iboNogQT8S-b9gO8YyH&_nc_ohc=qLgV1wvDgG8Q7kNvwGDNz95&_nc_oc=AdkeHgY-tZvL9l7FljNneDnLiaJnw7_A7OEj1UOJvmbFjt-RUV0my9rPWS0FvLf3eeo&_nc_zt=23&_nc_ht=scontent.fcgh10-1.fna&_nc_gid=qtm39EV0oXWAmFbyk4w-Gg&oh=00_AfJ3C64EKngA11W2bbGqkinyp9QM0mE_YYvhxNasdDMm2A&oe=6856E5BB"
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYrEj7YpX3SxkPmukzqJ122U2lM6_bCz1a_5gg8OiVL5Ovl6Yk6cIK6rhousOF57VRx4&usqp=CAU"
             alt="Foto antiga do pátio"
             style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
             loading="lazy" referrerpolicy="no-referrer">
@@ -1058,12 +1071,13 @@ footer {
         </figure>
         <!-- Documento 3 -->
         <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;">
-          <img src="https://scontent.fcgh10-2.fna.fbcdn.net/v/t1.6435-9/84152783_2432504203666992_2352260679286652928_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFa7EyvPZI84rYa0CBdsqkiOAhpb4mkdVI4CGlviaR1UnqPynAG08-XDAaBmVTCQSiBUxU5URpjmpQ26qVf-SZf&_nc_ohc=86tnrcFttMMQ7kNvwERlMg9&_nc_oc=AdmBo9sSunb7m4uWTjSFfduET0-b1htwiXIlPPNwUS8V5vx4FhQIi1z1EktIO3lGVwk&_nc_zt=23&_nc_ht=scontent.fcgh10-2.fna&_nc_gid=WU7ZXjdUzHEsQA21H0mtIw&oh=00_AfLNHqun0ItBjwB4pjT3O-xGMW9LSSPIGu-ut4cXpUB7fw&oe=6856F6D7"
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0PNX1mUOGhAS-EiphwJcJztS_WhZztDgH02RBTAS23cg_n_ISSXgCT4ER_7xWhD-Q7bvZtiENCsZWVDTltqudbU7P0L-eaRwJeqoaheJqwAIKsVyncPiqPClwUV1hWUscEo9Syu-_ZcYI/s1600/Tucuruvy02.jpg"
             alt="Relatório de direção"
             style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
             loading="lazy" referrerpolicy="no-referrer">
           <figcaption style="text-align:center; margin-top:8px; color:#444;"></figcaption>
         </figure>
+        </div></div>
       </div>
     </div>
   </section>
@@ -1108,76 +1122,36 @@ footer {
     </div>
   </div>
 </section>
-      <h1>Comentários</h1>
-
-  <form id="formComentario">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" required />
-
-    <label for="texto">Comentário:</label>
-    <textarea id="texto" rows="3" required></textarea>
-
-    <button type="submit">Enviar Comentário</button>
-  </form>
-
-  <div id="listaComentarios"></div>
-
-  <script>
-    const apiUrl = 'http://localhost:3000/comentarios';
-
-    // Função para mostrar os comentários
-    function carregarComentarios() {
-      fetch(apiUrl)
-        .then(res => res.json())
-        .then(data => {
-          const lista = document.getElementById('listaComentarios');
-          lista.innerHTML = '';
-          data.forEach(comentario => {
-            const div = document.createElement('div');
-            div.classList.add('comentario');
-            div.innerHTML = `
-              <div class="nome">${comentario.nome}</div>
-              <div class="data">${new Date(comentario.data).toLocaleString()}</div>
-              <div class="texto">${comentario.texto}</div>
-            `;
-            lista.appendChild(div);
-          });
-        })
-        .catch(err => {
-          console.error('Erro ao carregar comentários:', err);
-        });
-    }
-
-    // Enviar comentário via POST
-    document.getElementById('formComentario').addEventListener('submit', e => {
-      e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const texto = document.getElementById('texto').value.trim();
-
-      if (!nome || !texto) return alert('Preencha nome e comentário.');
-
-      fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, texto }),
-      })
-      .then(res => {
-        if (!res.ok) throw new Error('Erro ao enviar comentário');
-        return res.json();
-      })
-      .then(() => {
-        document.getElementById('nome').value = '';
-        document.getElementById('texto').value = '';
-        carregarComentarios();
-      })
-      .catch(err => alert(err.message));
-    });
-
-    // Carrega os comentários ao abrir a página
-    carregarComentarios();
-  </script>
-</body>
-</html>
+      </div>
+  </section>
+  <!-- Comentários via Giscus -->
+<section id="comentarios">
+  <div class="section-container">
+    <h2>Comentários</h2>
+    <div class="comment-section">
+      <form class="comment-form">
+  <label>Nome: <input type="text" name="nome" required></label>
+  <label>Comentário: <textarea name="texto" required></textarea></label>
+  <button type="submit">Enviar</button>
+</form>
+<div id="commentsContainer"></div>
+      <script src="https://giscus.app/client.js"
+              data-repo="silvajardimreserva/siteteste"
+              data-repo-id="R_kgDOPBzlgQ"
+              data-category="General"
+              data-category-id="DIC_kwDOPBzlgc4Cr_zZ"
+              data-mapping="pathname"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="preferred_color_scheme"
+              data-lang="pt"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+  </div>
+</section>
 <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Centenário do Silva Jardim. Todos os direitos reservados.</p>
@@ -1246,16 +1220,49 @@ footer {
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/comentarios.js"></script>
+  <script src="js/comentarios.js"></script>
   <script>
+const API_URL = "https://silvajardim.github.io/100anos/"; // Altere se o backend estiver em outro endereço
+
+// Buscar e exibir comentários
+function carregarComentarios() {
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(comentarios => {
+      const container = document.getElementById('commentsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+      comentarios.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'comentario-exibido';
+        div.innerHTML = `<strong>${c.nome}</strong><p>${c.texto}</p><small>${new Date(c.data).toLocaleString()}</small>`;
+        container.appendChild(div);
+      });
+    });
+}
+
+// Enviar novo comentário
 document.addEventListener('DOMContentLoaded', function() {
-  const btn = document.getElementById('toggleAbas');
-  const menu = document.getElementById('abasMenu');
-  let aberto = false;
-  btn.addEventListener('click', function() {
-    aberto = !aberto;
-    menu.style.display = aberto ? 'flex' : 'none';
-    btn.textContent = aberto ? 'Fechar Todas as Abas' : 'Abrir Todas as Abas';
-  });
+  carregarComentarios();
+  const form = document.querySelector('.comment-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = form.querySelector('[name="nome"]').value;
+      const texto = form.querySelector('[name="texto"]').value;
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ nome, texto })
+      })
+      .then(res => res.json())
+      .then(() => {
+        form.reset();
+        carregarComentarios();
+      });
+    });
+  }
 });
   </script>
 </body>
