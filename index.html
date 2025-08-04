@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centenário do Silva Jardim</title>
+  <link rel="preconnect" href="https://picsum.photos/id/1011/1600/900">
+  <link rel="preconnect" href="https://picsum.photos/id/1011/1600/900" crossorigin>
+  <link href="https://bing.com/th/id/BCO.badce622-c24c-4c3d-97aa-119c68633eae.png" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+   /* Reset Geral */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  .fixed-mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 14px 0 10px 0;
+    z-index: 9999;
+    font-size: 1.1rem;
+    box-shadow: 0 -2px 12px #14213d33;
+    border-radius: 12px 12px 0 0;
+  }
+}
+/* Ajuste de Fonte e Fundo Global */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Navegação */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 15px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #343a40;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #343a40;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #343a40;
+  font-weight: 500;
+}
+
+/* Hero */
+header.hero {
+  height: 100vh;
+  background: url('https://picsum.photos/id/1011/1600/900') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Seções */
+section {
+  padding: 80px 20px;
+}
+
+.section-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00e1ff;
+  margin-bottom: 20px;
+}
+
+/* Formulário de Comentários */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.comment-form button {
+  background-color: #343a40;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #000000;
+}
+
+/* Lista de Comentários */
+.comments-list {
+  margin-top: 20px;
+}
+
+.comment {
+  border-bottom: 1px solid #cccccc;
+  padding: 15px 0;
+}
+
+/* Rodapé */
+footer {
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+    :root {
+      --navy: #14213d;
+      --navy-dark: #0a1026;
+      --gray: #f1f1f1;
+      --gray-light: #343436;
+      --gray-dark: #444;
+      --white: #fff;
+      --black: #111;
+      --accent: #0112ff;
+      --accent-light: #eceff1;
+      --radius: 18px;
+      --shadow: 0 4px 24px rgba(20,33,61,0.10);
+      --timeline-dot: #0a0a0a;
+      --timeline-dot-active: #14213d;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--gray-light);
+      color: var(--black);
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      width: 100%;
+      background: var(--navy);
+      padding: 0.7rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      padding: 8px 1px;
+      border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      background: var(--gray);
+      color: var(--navy);
+      outline: none;
+    }
+    .hero {
+      min-height: 70vh;
+      background: linear-gradient(rgba(20,33,61,0.85),rgba(20,33,61,0.6)), url('https://i.pinimg.com/736x/53/66/c6/5366c64bf6055638b97a128f8acb1837.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+      padding: 100px 20px 60px 20px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      margin-bottom: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      animation: fadeInDown 1s;
+      /* LED azul celeste */
+      color: #00cfff;
+      text-shadow:
+      0 0 8px #00cfff,
+      0 0 16px #00cfff,
+      0 0 32px #00cfff,
+      0 0 48px #00cfff,
+      0 0 64px #00cfff,
+      2px 2px 16px #0008;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 650px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 8px #0008;
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    h2 {
+      text-align: center;
+      margin: 48px 0 32px 0;
+      color: var(--navy);
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 12px auto 0 auto;
+      border-radius: 2px;
+    }
+    /* Abas */
+    .tabs { margin-top: 30px; }
+    .tab-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .tab-button {
+      background: var(--navy-dark);
+      color: var(--white);
+      border: none;
+      padding: 12px 28px;
+      cursor: pointer;
+      border-radius: var(--radius);
+      font-size: 1.05rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px #14213d22;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .tab-button.active, .tab-button:focus {
+      background: var(--accent);
+      color: var(--white);
+      transform: scale(1.06);
+      outline: none;
+    }
+    .tab-content {
+      display: none;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px;
+      margin-bottom: 24px;
+      animation: fadeIn 0.5s;
+      color: var(--gray-dark);
+    }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    /* Legado */
+    .legado-box {
+      background: linear-gradient(120deg, #fff, #e5e5e5 90%);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px;
+      margin-bottom: 48px;
+      font-size: 1.15rem;
+      color: var(--gray-dark);
+      line-height: 1.7;
+    }
+    .legado-list {
+      margin-top: 18px;
+      padding-left: 18px;
+      color: var(--navy);
+    }
+    /* Linha do Tempo */
+    .timeline-section { margin: 60px 0 40px 0; }
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 36px;
+      border-left: 5px solid var(--navy);
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 38px;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s, border 0.2s;
+      border-radius: var(--radius);
+      padding: 20px 28px 20px 54px;
+      background: var(--white);
+      box-shadow: 0 2px 8px #14213d11;
+      border: 2px solid transparent;
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .timeline-event:hover, .timeline-event.active {
+      background: var(--accent-light);
+      border: 2px solid var(--accent);
+      box-shadow: 0 4px 16px #1a73e844;
+    }
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 24px;
+      width: 32px;
+      height: 32px;
+      background: var(--timeline-dot);
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 0 4px var(--accent);
+      transition: background 0.3s;
+      z-index: 2;
+    }
+    .timeline-event.active::before {
+      background: var(--timeline-dot-active);
+      box-shadow: 0 0 0 4px var(--navy);
+    }
+    .timeline-title {
+      font-weight: bold;
+      color: var(--navy);
+      font-size: 1.18rem;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .timeline-date {
+      font-size: 0.98rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+    }
+    .timeline-icon {
+      font-size: 1.3rem;
+      margin-right: 6px;
+      color: var(--accent);
+      vertical-align: middle;
+    }
+    .timeline-detail {
+      display: none;
+      margin-top: 12px;
+      color: var(--gray-dark);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      transition: all 0.3s;
+      padding-left: 6px;
+    }
+    .timeline-event.active .timeline-detail {
+      display: block;
+      animation: fadeIn 0.4s;
+    }
+    /* Depoimentos */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .testimonial {
+      background: linear-gradient(120deg, #fff, #e5e5e5 90%);
+      padding: 28px 22px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 320px;
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--gray-dark);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px #1a73e844;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 14px;
+      font-weight: 700;
+      text-align: right;
+      color: var(--navy);
+      font-style: normal;
+      font-size: 1rem;
+    }
+    /* Comentários */
+    .comment-section {
+      background: linear-gradient(120deg, #fff, #e5e5e5 90%);
+      padding: 44px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 700px;
+      margin: 0 auto 48px auto;
+    }
+    .comment-section h3 {
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+      text-align: center;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .comment-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: var(--gray-dark);
+    }
+    .comment-form input, .comment-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1.5px solid #bfc9d1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f8fbff;
+      transition: border 0.2s;
+    }
+    .comment-form input:focus, .comment-form textarea:focus {
+      border: 1.5px solid var(--accent);
+      outline: none;
+    }
+    .comment-form textarea { height: 90px; resize: vertical; }
+    .comment-form button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 2px 8px #14213d22;
+    }
+    .comment-form button:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: scale(1.03);
+    }
+    #commentsContainer { margin-top: 32px; }
+    .comentario-exibido {
+      margin-top: 22px;
+      padding: 18px;
+      background: var(--gray);
+      border: 1.5px solid #bfc9d1;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #14213d11;
+      transition: box-shadow 0.2s;
+      color: var(--gray-dark);
+    }
+    .comentario-exibido strong { display: block; margin-bottom: 6px; color: var(--navy);}
+    .comentario-exibido small { display: block; margin-top: 10px; color: #555; font-size: 0.96rem; }
+    @media (max-width: 700px) {
+      .section-container { padding: 0 6px; }
+      .testimonials { gap: 12px; }
+      .testimonial { width: 100%; }
+      .comment-section { padding: 24px 6px; }
+    }
+    @media (max-width: 500px) {
+      .hero h1 { font-size: 1.5rem; }
+      .hero { padding: 40px 4px 24px 4px; }
+      .tab-content, .legado-box { padding: 12px; }
+      .timeline { padding-left: 10px; }
+      .timeline-event { padding: 10px 6px 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Exemplo de menu de abas funcional em HTML + JavaScript -->
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+              <meta charset="UTF-8">
+              <title>Menu de Abas Funcional</title>
+              <style>
+                .abas-menu {
+                  display: none;
+                  gap: 0.9rem;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  max-width: 100vw;
+                  overflow-x: auto;
+                  padding: 0 8px;
+                  box-sizing: border-box;
+                  list-style: none;
+                }
+                .abas-menu.mostrar {
+                  display: flex;
+                }
+                .abas-menu li {
+                  flex: 1 0 auto;
+                  min-width: 60px;
+                  text-align: center;
+                }
+                .abas-menu a {
+                  display: block;
+                  white-space: nowrap;
+                  text-decoration: none;
+                  color: #222;
+                  padding: 6px 12px;
+                  border-radius: 6px;
+                  transition: background 0.2s;
+                }
+                .abas-menu a:hover {
+                  background: #e5e5e5;
+                }
+                #toggleAbas {
+                  background: #0078d7;
+                  color: #fff;
+                  border: none;
+                  padding: 10px 18px;
+                  border-radius: 8px;
+                  font-weight: bold;
+                  margin: 0 12px 0 0;
+                  cursor: pointer;
+                }
+                </style>
+                </head>
+                <body>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;">
+                  <button id="toggleAbas" style="background: linear-gradient(90deg, #00bfff 0%, #005bea 100%); color: #fff; border: none; padding: 12px 22px; border-radius: 10px; font-weight: bold; margin: 0 12px 0 0; cursor: pointer; box-shadow: 0 2px 12px #00bfff55; font-size: 1.08rem; letter-spacing: 1px; transition: background 0.2s, box-shadow 0.2s;">Abrir Todas as Abas</button>
+                </div>
+                <ul id="abasMenu" class="abas-menu" style="background: linear-gradient(90deg, #00bfff 0%, #005bea 100%); border-radius: 12px; box-shadow: 0 4px 24px #00bfff33; padding: 10px 8px;">
+                  <li><a href="#inicio" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Início</a></li>
+                  <li><a href="#sobre-site" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Sobre o Site</a></li>
+                  <li><a href="#historia" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">História</a></li>
+                  <li><a href="#legado" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Legado</a></li>
+                  <li><a href="#linha-do-tempo" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Linha do Tempo</a></li>
+                  <li><a href="#depoimentos" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Depoimentos</a></li>
+                  <li><a href="#galeria" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Galeria</a></li>
+                  <li><a href="#documentos" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Documentos</a></li>
+                  <li><a href="#fontes" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Fontes</a></li>
+                  <li><a href="#comentarios" style="color: #fff; background: #00bfff; border-radius: 8px; margin: 0 2px; font-weight: 600; transition: background 0.2s, color 0.2s;">Comentários</a></li>
+                </ul>
+                <style>
+                .abas-menu a,
+                .abas-menu a:visited {
+                  color: #fff !important;
+                  background: #00bfff !important;
+                  border-radius: 8px;
+                  margin: 0 2px;
+                  font-weight: 600;
+                  transition: background 0.2s, color 0.2s;
+                }
+                .abas-menu a:hover, .abas-menu a:focus {
+                  background: #fff !important;
+                  color: #005bea !important;
+                  box-shadow: 0 0 8px #00bfff88;
+                  outline: none;
+                }
+                #toggleAbas:hover, #toggleAbas:focus {
+                  background: linear-gradient(90deg, #005bea 0%, #00bfff 100%);
+                  box-shadow: 0 4px 24px #005bea55;
+                  outline: none;
+                }
+                </style>
+            
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const btn = document.getElementById('toggleAbas');
+                  const menu = document.getElementById('abasMenu');
+                  let aberto = false;
+                  btn.addEventListener('click', function() {
+                    aberto = !aberto;
+                    menu.classList.toggle('mostrar', aberto);
+                    btn.textContent = aberto ? 'Fechar Todas as Abas' : 'Abrir Todas as Abas';
+                  });
+                });
+              </script>
+            </body>
+
+  <!-- Hero / Início -->
+  <section id="inicio" class="hero" style="--hero-bg: linear-gradient(rgba(20,33,61,0.85),rgba(20,33,61,0.6)), url('https://bing.com/th/id/BCO.badce622-c24c-4c3d-97c68633eae.png') center/cover no-repeat; --hero-color: #1900ff;">
+    <h1 style="color: var(--hero-color); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-smooth: always; letter-spacing: 1.5px;">Centenário do Silva Jardim</h1>
+    <p style="color: var(--hero-color); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-smooth: always; letter-spacing: 0.5px;">100 anos formando cidadãos para o futuro.</p>
+  </section>
+  <!-- Sobre o Site -->
+  <section id="sobre-site" style="background: linear-gradient(120deg, #f3f4f7 80%, #e0e3ea 100%); padding: 56px 0 32px 0;">
+    <div class="section-container" style="max-width: 800px;">
+      <h2 style="margin-top:0; color: #23272f;">Sobre o Site</h2>
+      <p style="color: #444950; font-size: 1.13rem; margin-bottom: 18px;">
+        Este site foi criado para celebrar o centenário da Escola Estadual Silva Jardim, reunindo informações históricas, curiosidades, depoimentos, fotos, documentos e registros que contam a trajetória da instituição ao longo de 100 anos. O objetivo é preservar a memória da escola, valorizar sua importância para a comunidade do Tucuruvi e proporcionar um espaço de interação entre ex-alunos, professores, colaboradores e toda a sociedade.
+      </p>
+      <p style="color: #444950; font-size: 1.13rem;"></p>
+        Aqui você encontra uma linha do tempo detalhada, relatos de quem fez parte dessa história, galeria de imagens, arquivos históricos digitalizados e um espaço para deixar seu comentário ou homenagem. O site é colaborativo e aberto a contribuições, buscando manter viva a tradição e o legado do Silva Jardim para as futuras gerações.
+      </p>
+    </div>
+  </section>
+
+  <!-- Introdução e Contexto -->
+  <section id="contexto" style="background: linear-gradient(120deg, #f3f4f7 80%, #e0e3ea 100%); padding: 56px 0 32px 0;">
+    <div class="section-container" style="max-width: 800px;">
+      <h2 style="margin-top:0; color: #23272f;">Missão, Visão e Valores</h2>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 12px #23272f0d; padding: 24px;">
+          <h3 style="color: #3b4252; margin-bottom: 8px;">Missão</h3>
+          <p style="color: #444950;">
+            Oferecer uma educação pública de qualidade, promovendo o desenvolvimento integral dos alunos e formando cidadãos críticos, éticos e preparados para os desafios do futuro.
+          </p>
+        </div>
+        <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 12px #23272f0d; padding: 24px;">
+          <h3 style="color: #3b4252; margin-bottom: 8px;">Visão</h3>
+          <p style="color: #444950;">
+            Ser referência em ensino, inovação e inclusão, reconhecida pela excelência acadêmica e pelo compromisso com a transformação social da comunidade.
+          </p>
+        </div>
+        <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 12px #23272f0d; padding: 24px;">
+          <h3 style="color: #3b4252; margin-bottom: 8px;">Valores</h3>
+          <ul style="list-style: disc inside; color: #23272f; font-size: 1.08rem;">
+            <li>Respeito à diversidade e à individualidade</li>
+            <li>Compromisso com a ética e a cidadania</li>
+            <li>Valorização do conhecimento e da cultura</li>
+            <li>Colaboração, diálogo e participação</li>
+            <li>Inovação e busca constante pela melhoria</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+        </div>
+      </div>
+      <p style="margin-top: 32px; color: #444; text-align: center;">
+        A Escola Silva Jardim é um espaço de aprendizagem, convivência e construção de sonhos, atuando há 100 anos como pilar de desenvolvimento para a região do Tucuruvi e para toda a comunidade escolar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção História com abas -->
+  <section id="historia">
+    <div class="section-container">
+      <h2>História</h2>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-button active" data-tab="cap1">Capítulo 1</button>
+          <button class="tab-button" data-tab="cap2">Capítulo 2</button>
+          <button class="tab-button" data-tab="cap3">Capítulo 3</button>
+        </div>
+        <div class="tab-contents">
+          <div class="tab-content active" id="cap1">
+            <img src="https://i0.wp.com/www.osaqua.com.br/wp-content/uploads/2021/05/Antonio-da-Silva-Jardim-Histituto-Historico-e-Geografico-de-Santos.jpg?resize=200%2C350" alt="Antonio da Silva Jardim dressed formally in a dark suit and white shirt, facing forward with a neutral expression. The background is plain and muted, focusing attention on the subject. The overall tone is serious and historical, evoking a sense of respect and remembrance.">
+            <h3>Bibliografia</h3>
+            <p>   Antônio da Silva Jardim foi um proeminente advogado, jornalista e ativista político brasileiro, amplamente reconhecido por seu envolvimento ativo nos movimentos pela abolição da escravatura e pela implantação da república. Ele defendia que tanto a Abolição quanto a República deveriam engendrar mudanças significativas para toda a sociedade brasileira.
+
+Ele nasceu na vila de Nossa Senhora da Lapa de Capivari, que atualmente é o município que leva seu nome, no estado do Rio de Janeiro. Filho de Gabriel da Silva Jardim, um educador humilde que lecionava em sua própria propriedade, e de Felismina Leopoldina de Mendonça, vinha de uma família simples, mas marcada por valores sólidos. Por parte de pai, era neto de Antônio da Silva Jardim e Dona Luciana Maria; por parte de mãe, de Leandro Freire Ribeiro e Dona Lauriana Leopoldina do Amor Divino.
+
+Buscando uma educação mais avançada, foi enviado a Niterói, onde estudou nos colégios Silva Pontes e São Bento. Ali, aprendeu português, francês, geografia e latim. Durante esse período, ajudou a fundar o jornal estudantil O Laboro Literário, que marcou o início de sua militância política em defesa da liberdade e da justiça.
+
+Com poucos recursos financeiros, enfrentou grandes desafios durante sua trajetória acadêmica. Mudou-se para o Externato Jasper, onde também passou a trabalhar para custear os estudos. Determinado, seguiu para São Paulo e ingressou na tradicional Faculdade de Direito de São Paulo, onde se engajou nas discussões políticas da época, especialmente nas ideias republicanas e na luta abolicionista.
+
+Durante sua juventude, aproximou-se da influente família do Conselheiro Martim Francisco de Andrada. Foi nesse meio que conheceu Ana Margarida, com quem se casou. Ela era neta do Patriarca da Independência, José Bonifácio de Andrada e Silva. O casal teve quatro filhos, incluindo um que recebeu o nome do pai como homenagem.
+
+Movido por seus ideais, Silva Jardim abandonou a advocacia, vendeu seu escritório e dissolveu sua sociedade para se dedicar integralmente à causa republicana. Viajou intensamente entre os estados do Rio de Janeiro, São Paulo e Minas Gerais, participando de comícios, escrevendo, discursando e enfrentando tanto aclamações quanto perseguições.
+
+Mesmo com a saúde fragilizada desde a infância por causa do paludismo, manteve-se firme em sua militância. Após a Proclamação da República, no entanto, foi ignorado pelos militares que assumiram o poder. Tentou se eleger deputado, mas não teve sucesso. Desencantado, afastou-se da política e buscou descanso e novas experiências na Europa.
+
+Em 1891, aos 30 anos, durante uma visita a Pompeia, na Itália, decidiu explorar o vulcão Vesúvio. Apesar dos alertas sobre possíveis riscos, foi tragado por uma fenda que se abriu repentinamente na cratera. Sua morte permanece envolta em mistério — não se sabe ao certo se foi um acidente ou um ato deliberado.
+
+De acordo com reportagem do jornal A Pátria Mineira, publicada em 30 de julho de 1891, em São João del-Rei, o episódio foi testemunhado por um guia e seu amigo Joaquim Carneiro de Mendonça. A matéria, baseada na “Carta Parisiense” de Xavier de Carvalho, relata que Silva Jardim chegou a tentar escapar, mas ficou ferido, enquanto Carneiro foi socorrido por um guia local.
+
+Como homenagem a seu legado, o antigo município de Capivari passou a se chamar Silva Jardim — um tributo eterno a uma vida dedicada à liberdade, à justiça social e à transformação do Brasil.</p>
+            <ul></ul>
+          </div>
+          <div class="tab-content" id="cap2">
+            <img src="https://i.pinimg.com/originals/69/f6/9a/69f69aaf7ee3490099873f30eb7bd33f.jpg" alt="Imagem representando o Legado">
+            <h3>História do município e da fundação da Escola Silva Jardim</h3>
+            <p>   Nos anos 1920 a educação pública ainda chegava lentamente aos bairros periféricos de São Paulo. A reforma educacional de 1920 em SP incluiu um recenseamento escolar para identificar o analfabetismo infantil. Na prática, o Tucuruvi era área rural até por volta de 1918 e só então passou a ver surgirem instituições públicas: igrejas, cinemas e escolas públicas começaram a aparecer gradualmente na região.</p>
+            <p><strong>Cronologia da escola em Tucuruvi</strong></p>
+            <p>   24 fev 1922 – Inauguração das Escolas Reunidas do Tucuruvi, primeira escola pública do bairro, cujo diretor foi o professor Nestor Pereira Leite.</p>
+            <p>   fev 1925 – Criação do Grupo Escolar do Tucuruvi (localizado na Rua Ausônia, hoje Av. Tucuruvi, 724) com 12 salas de aula; o diretor era o professor Antônio M. Rosa.</p>
+            <p>   1936 – Elaboração do projeto arquitetônico do Grupo Escolar Silva Jardim (Av. Tucuruvi, 724) – esse dado consta em arquivo da FAU-USP: “Data do projeto: 1936”.</p>
+            <p>   29 set 1938 – Inauguração oficial do Grupo Escolar Silva Jardim, em homenagem ao político Antônio da Silva Jardim. Na cerimônia, o diretor continuava sendo Antônio M. Rosa e estiveram presentes autoridades como o futuro governador Adhemar de Barros.</p>
+            <p><strong>Registros oficiais e documentos do governo</strong></p>
+            <p>   Não foram encontrados decretos ou portarias estaduais datados de 1926 criando a escola Silva Jardim. Na verdade, os registros oficiais posteriores confirmam o quadro acima. Por exemplo, o Decreto-lei nº 42.030/1963 do Estado de São Paulo menciona expressamente a existência do Grupo Escolar “Silva Jardim” ao estabelecer a criação do Grupo Escolar do Tucuruvi via transferência de classes. (Esse decreto, embora muito posterior a 1926, é documento oficial do governo paulista atestando a continuidade da Silva Jardim.) Não localizamos menções a 1926 na imprensa ou na legislação daquela época; sabe-se apenas, por historiadores locais, que a construção do prédio sede foi projetada em 1936.</p>
+            <p><strong>Primeiros diretores e professores</strong></p>
+            <p>   As fontes históricas apontam o professor Antônio M. Rosa como primeiro diretor tanto do Grupo Escolar do Tucuruvi (1925) quanto, depois, do Grupo Escolar Silva Jardim (inaugurado em 1938). Em relatos de ex-alunos, aparece também o nome de Ulisses Guimarães (que viria a ser importante político nacional) como diretor da escola nesse período, conforme depoimento de quem cursou os primeiros anos do Colégio Silva Jardim na década de 1930. (Já a professora primária Mariazinha é lembrada como primeira professora de classe por um ex-aluno, mas não há fonte publicada que confirme data ou cargo formal.)</p>
+            <p>   A Escola Silva Jardim tem suas raízes na década de 1950, quando foi fundada com o objetivo de oferecer educação básica à população local. Inicialmente, a instituição atendia a uma demanda crescente por ensino na região, proporcionando acesso à educação para crianças e jovens da comunidade.</p>
+            <p><strong>Transformações ao Longo dos Anos</strong></p>
+            <p>   Década de 1960: A escola passou a oferecer o 1º grau, conhecido como Curso Normal Regional "Frei Rogério Neuhaus".</p>
+            <p>   1962: A instituição foi transformada em Ginásio Normal "Professora Eládia de Maia Barbosa", ampliando sua oferta educacional.</p>
+            <p>   12 jun 1963 – Decreto Estadual nº 42.030/1963 (governo Adhemar de Barros) cria formalmente o “Grupo Escolar do Tucuruvi” e transfere para ele 8 salas originárias do já existente Grupo Escolar Silva Jardim. Esse ato comprova que, em 1963, a Escola Silva Jardim já funcionava há tempo na capital.</p>
+            <p>   1971: A escola passou a se chamar Escola Básica Silva Jardim, refletindo sua expansão e diversificação de cursos.</p>
+            <p>   1987: A denominação foi alterada para Colégio Estadual "Silva Jardim", consolidando seu status como instituição de ensino fundamental e médio.</p>
+            <p>   2000: A escola recebeu sua nomenclatura atual, Escola de Educação Básica Silva Jardim, mantendo-se até os dias atuais.</p>
+            <p><strong>Estrutura Atual</strong></p>
+            <p>   Atualmente, a Escola de Educação Básica Silva Jardim ocupa uma área total de 10.000 m², com um prédio principal de 1.779,33 m² e um ginásio de 854,90 m². A instituição atende aproximadamente 960 alunos distribuídos em 34 turmas, abrangendo séries iniciais, finais do ensino fundamental e ensino médio. Além disso, oferece serviços de Atendimento Educacional Especializado (SAEDE) para alunos com necessidades específicas.</p>
+            <p><strong>Patrono da Escola</strong></p>
+            <p>   O patrono da escola é o ilustre político e ativista Antônio da Silva Jardim, reconhecido por sua luta pela implantação da República e pela abolição dos escravos. Sua escolha</p>
+            <p>   Seu nome atual é uma homenagem ao jornalista e político fluminense Antônio da Silva Jardim. Anteriormente o município chamava-se Capivari, cuja fundação se deu em 1801, nas terras de D. Maria Rodrigues, viúva de Manoel da Silveira Azevedo, onde o casal havia construído uma capela em devoção à Sant’Ana. A viúva doou a capela e seu entorno, para a criação da paróquia de Nossa Senhora da Lapa de Capivari, a pedido da população local. No entorno da capela formou-se o vilarejo, que posteriormente foi elevado à categoria de freguesia, e mais adiante à categoria de vila, por decreto de 1841, separando-se definitivamente do município de Cabo Frio. A condição imposta para o desmembramento, era de que alguns fazendeiros locais se responsabilizassem e construíssem uma câmara, que executava as mesmas funções atuais de uma prefeitura, bem como uma cadeia para a nova vila. O Major Joaquim Fernandes Lopes Ramos, o Alferes Luiz Gomes da Silva Leite, juntamente com alguns membros da família Pinto Coelho, executaram as construções entre os anos de 1841 e 1843, atendendo assim às exigências. A partir do ano de 1943, a vila de Capivari teve seu nome modificado para Silva Jardim, denominação esta que perdura até os dias atuais.</p>
+            <ul></ul>
+          </div>
+          <div class="tab-content" id="cap3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2gBQHP3jEARAoaENwX8BTR6DqHqZ-4GXs_YPXaDUFm3kCjaHc2SC-WnF-gy432u_2f_Q&usqp=CAU"
+              alt="Grupo de estudantes reunidos em frente ao prédio da escola Silva Jardim, sorrindo e conversando em clima descontraído, com árvores e parte da fachada da escola ao fundo, atmosfera alegre e de companheirismo"
+              style="max-width: 300px; height: auto; display: block; margin: 0 auto;" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Curiosidades Sobre a Escola</h3>
+            <p>   Este era o edifício do Grupo Escolar de Tucuruvi no ano de 1928. Os estudantes podem ser vistos na varanda durante a captura da imagem. No lugar onde funcionou a escola, atualmente, encontra-se a Igreja Metodista do Tucuruvi na Rua Ausonia.</p>
+            <p>   Provavelmente, era uma construção muito antiga uma vez que existiria antes do parcelamento da Vila Mazzei... talvez fosse a principal residência da fazenda. Impressionante... situado em uma região privilegiada com uma vista deslumbrante.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuBFkafdf_KFQbb9_9XLNoyfp92XfMTLNaEer1kFmf706HecHwp_DZGwe0dLR6JtgzbM&usqp=CAU"
+              alt="Grupo de estudantes reunidos em frente ao prédio da escola Silva Jardim, sorrindo e conversando em clima descontraído, com árvores e parte da fachada da escola ao fundo, atmosfera alegre e de companheirismo"
+              style="max-width: 300px; height: auto; display: block; margin: 0 auto;" loading="lazy" referrerpolicy="no-referrer">
+            <p>   A diretora era Profa Durvalina Cardoso e naquele ano Silva Jardim contava com 1054 alunos distribuidos entre o 1o ao 4o ano primario em dois periodos (manhã e tarde) com um fila de espera de 230 crianças.</p>
+            <p>   Era a principal unidade de ensino publico de Tucuruvi tendo seu predio atual sido inaugurado em 1938 e já contava com assistencia dentaria e cozinha economica que fornecia alimentação basica no refeitório.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4rle6slxMfPyVR585aYjGJtqmzfCz0F3Jw&s"
+              alt="Grupo de estudantes reunidos em frente ao prédio da escola Silva Jardim, sorrindo e conversando em clima descontraído, com árvores e parte da fachada da escola ao fundo, atmosfera alegre e de companheirismo"
+              style="max-width: 300px; height: auto; display: block; margin: 0 auto;" loading="lazy" referrerpolicy="no-referrer">
+            <p>   As vagas para estudantes do ciclo primario eram insuficientes para atender à demanda no Grupo Escolar de Tucuruvi. O Governo do Estado criou então uma nova escola que funcionou em um predio adaptado na Av Tucuruvi para que pudesse comportar o maior numero de alunos possivel. Isso ocorre no inicio da década de 30.</p>
+            <p>   Nossa curtidora Neide dos Anjos nos brinda com uma incrivel foto da turma de alunos do Silva Jardim ainda em suas antigas instalações. Seu pai é o segundo menino ao alto do lado direito com paletó. Havia uma grande ansiedade pelo termino das obras do Grupo Escolar Silva Jardim que foi entregue à população em 29 de setembro de 1938.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGUxnhwJjqatdNpg9ozupT_H7NXA4B0ghN6g&s"
+              alt="Grupo de estudantes reunidos em frente ao prédio da escola Silva Jardim, sorrindo e conversando em clima descontraído, com árvores e parte da fachada da escola ao fundo, atmosfera alegre e de companheirismo"
+              style="max-width: 300px; height: auto; display: block; margin: 0 auto;" loading="lazy" referrerpolicy="no-referrer">
+            </html>            <p>   Foto dos alunos da fanfarra do G. E. Silva Jardim na área de concentração antes do início do desfile. O local é onde foi a estação Tucuruvi do trem da Cantareira. Observa-se ao fundo a chaminé de onde era a padaria do Sr. Ângelo e de seu filho, Walter Davanzo. Foto tirada em desfile no bairro Tucuruvi, em 07 de setembro de 1969. Nesta foto, estou ao centro, apoiando as baquetas com os dedos sobre o instrumento (surdo). (Jânio Pires).</p>
+            <ul></ul>
+          </div>
+          </div>
+  </section>
+  <!-- Seção Legado -->
+  <section id="legado" style="background: linear-gradient(120deg, #fff 80%, #e5e5e5 100%); padding: 56px 0 32px 0;">
+    <div class="section-container">
+      <h2>Legado</h2>
+      <div class="legado-box" style="background: #fff;">
+        <div style="display: flex; justify-content: center; margin-bottom: 28px;"></div></div></div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT26c8m4dTsTvlDRTGizRRz3CO98CrKEpmB2g&s"
+              alt="Three-story school building labeled Grupo Escolar Silva Jardim with large windows and art deco architectural style, groups of students in uniforms gathered and talking outside near the entrance, one person standing alone by the wall, street and sidewalk in the foreground, overall atmosphere is nostalgic and evokes a sense of community and history"
+              style="max-width: 320px; height: auto; border-radius: 12px; box-shadow: 0 4px 24px rgba(255, 254, 254, 0.1);"
+            >
+        </div>
+        <p>
+             A Escola Estadual Silva Jardim – em Tucuruvi – construiu, ao longo dos anos, um legado que vai muito além de sua infraestrutura e das salas de aula. Seu impacto se revela na transformação social e na formação de gerações de cidadãos críticos, resilientes e comprometidos com a comunidade.
+        </p>
+        <p>
+             Mesmo passando por períodos de mudanças e adaptações, a instituição sempre soube integrar tradição à inovação, atendendo tanto alunos em educação presencial quanto à distância. Essa flexibilidade pedagógica permitiu que a escola se mantivesse atualizada e relevante diante dos desafios contemporâneos, contribuindo para um ensino de qualidade e inclusivo.
+        </p>
+        <p>
+             Desde sua criação – registrada, por exemplo, na data de 13/06/1926 – a E.E. Silva Jardim tem sido referência na região, marcando sua presença como um ponto de convergência para o saber e para a cultura. As histórias que se entrelaçam em seus corredores carregam a essência de uma educação que valoriza o respeito, o esforço coletivo e o desenvolvimento integral dos alunos.
+        </p>
+        <p>
+             Essa trajetória se reflete na confiança depositada pela comunidade, no reconhecimento de seus docentes dedicados e na capacidade de se reinventar para atender às demandas de cada nova geração.
+        </p>
+        <p>
+             Mais do que uma simples instituição de ensino, o legado da E.E. Silva Jardim é um testemunho de superação, comprometimento e paixão pelo conhecimento. Ele está presente nas memórias dos ex-alunos, que hoje, espalhados em diversas áreas da sociedade, levam consigo os valores e a sólida formação que encontraram na escola.
+        </p>
+        <p>
+             Essa herança educativa reafirma que o verdadeiro valor de uma instituição está em seu papel de transformar vidas e contribuir para a construção de uma sociedade mais justa e consciente.
+        </p>
+        <p>
+             A reflexão sobre esse legado também nos leva a pensar na importância de outras escolas e instituições que, assim como a E.E. Silva Jardim, deixam marcas profundas e duradouras em suas comunidades. Se você se interessa por histórias de superação e por trajetórias que conciliam tradição com inovação, existem inúmeras narrativas no universo da educação pública que podem inspirar ainda mais a valorização do ensino como pilar de mudança social.
+        </p>
+        <ul class="legado-list">
+        </ul>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+  <!-- Linha do Tempo -->
+  <section id="linha-do-tempo" class="timeline-section">
+    <div class="section-container">
+      <h2>Linha do Tempo</h2>
+      <div class="timeline">
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1920<span class="timeline-date">Fundação</span></div>
+          <div class="timeline-detail">
+            <p>   1926 – Fundação do Grupo Escolar “Silva Jardim” (em homenagem ao político Antônio da Silva Jardim). Esse grupo escolar já atendia alunos da região, e seu prédio definitivo seria projetado uma década depois.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1930<span class="timeline-date">Consolidação e Expansão da Infraestrutura</span></div>
+          <div class="timeline-detail">
+            <p>   1936 – O arquiteto José Maria da Silva Neves elaborou o projeto do novo edifício escolar na Av. Tucuruvi, 724. Segundo registros acadêmicos, o prédio foi concluído em 12/3/1936 (data de inauguração do Grupo Escolar).</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1940<span class="timeline-date">Modernização e Mudanças pedagógicas</span></div>
+          <div class="timeline-detail">
+            <p>   1940–1949 – Mudanças pedagógicas significativas nesse período. A escola seguiu funcionando como instituição de 1.º grau (ensino fundamental), consolidando-se na comunidade local.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1950<span class="timeline-date">Inovação Pedagógica e Ampliação dos Serviços</span></div>
+          <div class="timeline-detail">
+            <p>   1950–1959 –  Continuidade das atividades escolares regulares, possivelmente ainda incluindo turmas de “Ginásio” (antigo Ensino Médio da época).</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1960<span class="timeline-date">Evidência nos Indicadores de Desempenho</span></div>
+          <div class="timeline-detail">
+            <p>   1960–1969 –  A escola manteve ensino fundamental e, eventualmente, cursos de Ginásio, até mudanças no sistema educacional brasileiro no fim da década.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1970<span class="timeline-date">Atualizações, Investimentos e o Compromisso com a Modernização</span></div>
+          <div class="timeline-detail">
+            <p>   1970–1979 – Mantida como escola estadual de 1.º grau, sem informação pública sobre reformas estruturais. Mudanças administrativas gerais ocorreram na rede estadual (como o fim dos antigos “ginásios” e a criação do ensino fundamental único), mas sem fontes específicas sobre o Silva Jardim.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1980<span class="timeline-date">Tradição e Desafios para o Futuro</span></div>
+          <div class="timeline-detail">
+            <p>   1980–1989 – Período de estabilidade: a escola continuou atendendo o ensino fundamental (e, eventualmente, ensino médio, conforme mudanças de nomenclatura da rede), sem registro de grandes reformas ou eventos públicos nas fontes consultadas.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 1990<span class="timeline-date">Expansão Geral do Ensino Fundamental</span></div>
+          <div class="timeline-detail">
+            <p>   1990–1999 – A escola manteve suas atividades normais. Nos últimos anos do século, houve expansão geral do ensino fundamental no estado, mas não há dados específicos públicos sobre obras ou prêmios no Silva Jardim.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 2000
+<span class="timeline-date">Expansão da Infraestrutura e Ensino Religioso Facultativo </span></div>
+          <div class="timeline-detail">
+            <p>   2002 – Implementação opcional do Ensino Religioso nas escolas estaduais. Na EE Silva Jardim, a professora Francisca Nascimento passou a ministrar aulas de ensino religioso facultativo, atendendo à orientação da Secretaria de Educação do Estado.</p>
+            <p>   2007 – A EE Silva Jardim sediou a “Feira de Biologia” do Projeto Celular do Instituto de Biociências da USP. O evento – com trabalhos de ciências, maquetes e apresentações – reuniu alunos de várias escolas públicas e teve entrada aberta à comunidade.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 2010<span class="timeline-date">Greve, Reformas e Novas Iniciativas Educacionais</span></div>
+          <div class="timeline-detail">
+            <p>   Mar/2010 – Professores e funcionários da Silva Jardim aderiram à greve estadual da educação pública paulista. Relatórios do sindicato Apeoesp citaram a escola como uma das paralisadas naquele dia na Zona Norte de São Paulo.</p>
+            <p>   2010–2019 – Década marcada por programas educacionais estaduais: por exemplo, o “Professores Conectados” (2015-16) e o “Novo Ensino Médio” em 2017 (reforma curricular), mas não há fontes específicas públicas sobre como a Silva Jardim participou. Informações de transparência posteriores mostram que a escola passou a integrar programas como Centro de Estudos de Línguas (CEL), Centro de Mídias (CMSP), Inova Educação, Novotec (ensino técnico integrado) e Dignidade Íntima, além de manter convênios de PME e PEB.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-title"><span class="timeline-icon"></span>Anos 2020<span class="timeline-date">Tecnologias e Inovações Em Educação</span></div>
+          <div class="timeline-detail">
+            <p>   2021 – A escola foi contemplada pelo Programa de Ensino Integral (PEI) do estado e pelo curso EJATEC (Educação de Jovens e Adultos com itinerário Tecnológico). A implantação desses programas gerou debate: a comunidade escolar chegou a lançar uma petição pública contra as mudanças propostas durante a pandemia.</p>
+            <p>   2021 – Desempenho em índices de qualidade: o IDEB (índice nacional) dos anos finais (6º-9º anos) da EE Silva Jardim foi 5,30 em 2021, atingindo a meta estadual para a série (5,3). O IDESP (índice estadual) correspondente ficou em 3,39.</p>
+            <p>   2022 – Como compensação às perdas da pandemia, a escola participou do “Projeto de Recuperação Intensiva” da Secretaria da Educação (programa para reforço escolar emergencial).</p>
+            <p>   2020–2024 – A EE Silva Jardim participa de vários programas estaduais de apoio e inovação: além do envolvimento em projetos como Centro de Estudos de Línguas, Centro de Mídias, Inova Educação, Novotec Integrado, Dignidade Íntima e Professores Conectados.</p>
+          </div>
+        </div> 
+      </div>
+      <p style="text-align:center; color:var(--gray-dark); margin-top:24px;">Clique em cada etapa para ver detalhes da jornada.</p>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos">
+    <div class="section-container">
+      <h2>Depoimentos</h2>
+      <div class="testimonials">
+        <div class="testimonial"><p>"Olá, pessoal. Sou o professor Stefano e dou aula de inglês. Estou na escola a 17 anos, tenho um carinho muito especial por essa escola que me acolheu como se fosse uma família, tenho uma turma muito especial guardada no meu coração até hoje, pois foi a primeira turma que eu acompanhei do primeiro ano do  nível fundamental até o último ano do ensino médio, até hoje tenho grandes amizades e de vez em quando ainda nos encontramos."</p><span>- Stefano, Professor</span></div>
+        <div class="testimonial"><p>"É um colégio referência na zona norte de São Paulo. Aprecio e admiro demais a organização pedagógica e também o incentivo cultural, principalmente da parte da direção para os alunos."</p><span>- Marcela Buttazzi, Professora do Técnico</span></div>
+        <div class="testimonial"><p>"Cheguei aqui em 2002, eu poderia já estar aposentado, porém quero e vou ter o prestígio de participar dos 100 anos dessa escola maravilhosa que mudou minha vida. Estou aqui nessa escola a 23 anos, meu nome é Eraldo Sampaio. Nesses 23 anos tivemos muita alegria! Nossa escola proporciona aos nossos alunos a serem pessoas melhores, do bem, cidadãos de caráter e a serem protagonistas. Comigo os alunos tem um ótimo relacionamento, diante de conversas diretas com os alunos eu sugiro projetos, passeios acadêmicos, teatros, etc."</p><span>- Eraldo Sampaio, Diretor</span></div>
+        <div class="testimonial"><p>"Colégio Silva Jardim, eu estou aqui a pouco tempo, porém eu conheço a escola a muitos anos. O Silva Jardim é uma instituição de ensino secundário, que carrega no meu ponto de vista, valores e princípios, pautados na relação de ensino e aprendizado, priorizando os discentes. Com isso, a escola prestes a completar seu centenário, se tornou ao longo do tempo uma referência quando o assunto é educação."</p><span>- Érico Bernardes, Professor</span></div>
+        <div class="testimonial"><p>"A escola é muito boa, um momento marcante foi com a primeira classe, quando tivemos o primeiro interclasse que foi no Parque da Juventude, conseguimos utilizar lá quase todas as quadras."</p><span>- Lucas, Professor Educação Física</span></div>
+        <div class="testimonial"><p>"Eu gosto da escola! Os alunos são bem educados, principalmente os alunos do terceiros anos. Ela é bem firme e exigente em relação ao uniforme e ao respeito com os funcionários. Eu gosto de trabalhar aqui."</p><span>-  Silvia, Inspetora</span></div>
+        <div class="testimonial"><p>"Entrei na escola 2014 e saí em agosto de 2023, porém voltei novamente em dezembro de 2023. O conhecimento que eu tenho da escola como trabalhadora e como mãe de alunos que estudaram aqui, a escola é muito boa, a direção é muito boa, os alunos são bem simpáticos, principalmente os alunos do terceiro ano, que sempre me tratam super bem."</p><span>-  Nazaré, Colaboradora da escola</span></div>
+        <div class="testimonial"><p>"Eu estudo aqui desde o sexto ano. Pouco tempo depois de eu entrar na escola, um certo aluno da minha sala começou a mexer comigo, porém, conforme o tempo foi passando, o bullying só aumentava. Tempos depois dessa perseguição, ele simplesmente começou a mandar fotos pra minha família, até que decidi tomar uma atitude. Fui até a direção e comecei descrever o ocorrido e o que ele já vinha fazendo a algum tempo, nisso a direção chamou os pais deles e decidiram expulsar o garoto, o qual fazia bullying comigo. Diante a esse acontecimento, eu quero mostrar o quanto a escola prezou e me valorizou como aluno, pois tomou uma atitude de imediato e não aceitou esse tipo de coisa. Já se passou um tempinho desse acontecimento, mas um fato verídico é, que a escola continua com essa atenção com os alunos."</p><span>- Eduardo, Aluno </span></div>
+
+      </div> 
+    </div>
+  </section>
+    <div style="height:  100px;"></div>
+  </footer>
+    </div>
+  </section>
+  <!-- Galeria de Fotos e Vídeos -->
+  <section id="galeria">
+    <div class="section-container">
+      <h2>Galeria de Fotos</h2>
+      <div class="galeria-grid">
+        <!-- Foto 1 -->
+        <figure>
+          <img src="https://www.diariozonanorte.com.br/ha-117-anos-128-contos-de-reis-deram-inicio-ao-tucuruvi/tucuruvi2/"
+            alt="Fachada do Grupo Escolar Silva Jardim, década de 1940.">
+        </figure>
+        <!-- Foto 2 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX9_cWLVKpqydGS-cUr0ykFHXGnUa2KNNLUTeDhugwM3Y0FyRd4aTmR9ig8JGeEVwX4eU&usqp=CAU"
+            alt="Estudantes reunidos em frente ao prédio da escola, anos 1980.">
+        </figure>
+        <!-- Foto 3 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKvQtSkBwYG3Z-HoKY2Pft_EnfRQDVh6ptzQ&s"
+            alt="Retrato de Antonio da Silva Jardim, patrono da escola.">
+        </figure>
+        <!-- Foto 4 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJNKC2wEbmgBgKp3fFqhfK798zfkI5K4e84JsC9iW5qotAoFfSoc4DwcNFER-_LFDPmy0&usqp=CAU"
+            alt="Brasão de Silva Jardim">
+        </figure>
+        <!-- Foto 5 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQISQsg2QBz1Y4lmEL2CotTDJGI2WkG0pM_S56eV3CDs9jUxmO008Lu6SaHGNVUDy7Yu0g&usqp=CAU"
+            alt="Foto antiga do prédio escolar">
+        </figure>
+        <!-- Foto 6 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB4UwBSDoEyhVLguu9AB2G5GffRpInU4CcIujHEUyyX-dqIabLgFVldZGY_NnTsMNPpp8&usqp=CAU"
+            alt="Grupo de estudantes em frente à escola, década de 1920.">
+        </figure>
+        <!-- Foto 7 -->
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdmnftePqzIqH835T73jeRdmMUVTBbVxhFyv_l2h2NfGM_vyHKUWXiRzHtY1jAP5IQs4&usqp=CAU"
+            alt="Vesúvio - local da morte de Silva Jardim">
+        </figure>
+        <!-- Foto 8 -->
+        <figure>
+          <img src="https://i.pinimg.com/236x/d5/9f/94/d59f940be8ef5e063642e1bd6551b94c.jpg"
+            alt="Vista aérea da escola Silva Jardim.">
+        </figure>
+      </div>
+    </div>
+  </section>
+  <style>
+  .galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .galeria-grid figure {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #14213d11;
+    overflow: hidden;
+  }
+  .galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  @media (max-width: 700px) {
+    .galeria-grid {
+      gap: 12px;
+    }
+    .galeria-grid figure {
+      width: 100vw;
+      max-width: 98vw;
+      height: 180px;
+    }
+  }
+  </style>
+  <!-- Documentos e Arquivos Históricos -->
+  <section id="documentos">
+    <div class="section-container">
+      <h2>Documentos e Arquivos Históricos</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        <!-- Documento 1 -->
+        <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;"></figure>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSnkoBL_koEQh3W7kZlQDpu1ztitBImfQvEz0VLjI5UXoHENu9xif6d5vU56Z7rgLq-T08nXne2kIRIbE-e9IC3NFmD6xx2T4o1SthjmbVoPzRUESfWfUzSXwtTze7Mvd0QS-S5Sw7-Za4/s1600/Tucuruvy03.jpg"
+            alt="Recorte de jornal antigo"
+            style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
+            loading="lazy" referrerpolicy="no-referrer">
+          <figcaption style="text-align:center; margin-top:8px; color:#444;"></figcaption>
+        </figure>
+        <!-- Documento 2 -->
+        <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;"></figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYrEj7YpX3SxkPmukzqJ122U2lM6_bCz1a_5gg8OiVL5Ovl6Yk6cIK6rhousOF57VRx4&usqp=CAU"
+            alt="Foto antiga do pátio"
+            style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
+            loading="lazy" referrerpolicy="no-referrer">
+          <figcaption style="text-align:center; margin-top:8px; color:#444;"></figcaption>
+        </figure>
+        <!-- Documento 3 -->
+        <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 220px;">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0PNX1mUOGhAS-EiphwJcJztS_WhZztDgH02RBTAS23cg_n_ISSXgCT4ER_7xWhD-Q7bvZtiENCsZWVDTltqudbU7P0L-eaRwJeqoaheJqwAIKsVyncPiqPClwUV1hWUscEo9Syu-_ZcYI/s1600/Tucuruvy02.jpg"
+            alt="Relatório de direção"
+            style="border-radius: 10px; width: 220px; height: 300px; object-fit: cover; display: block;"
+            loading="lazy" referrerpolicy="no-referrer">
+          <figcaption style="text-align:center; margin-top:8px; color:#444;"></figcaption>
+        </figure>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  </section>
+  </section>
+  </section></figure>
+  <!-- Bibliografia e Fontes -->
+  <section id="fontes">
+  <div class="section-container">
+    <h2>Bibliografia e Fontes</h2>
+    <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 12px #23272f0d; padding: 28px; max-width: 900px; margin: 0 auto;">
+      <ul style="list-style: disc inside; color: #23272f; font-size: 1.08rem; line-height: 1.7;">
+        <li>
+          <strong>Wikipédia</strong> – <a href="https://pt.wikipedia.org/wiki/Ant%C3%B4nio_da_Silva_Jardim" target="_blank" rel="noopener">Antônio da Silva Jardim</a>.<br>
+          Fonte de informações biográficas, trajetória política e contexto histórico do patrono da escola, reunindo dados de domínio público e referências acadêmicas.
+        </li>
+        <li>
+          <strong>Decreto Estadual nº 42.030/1963</strong> – Governo do Estado de São Paulo</a>.<br>
+          Legislação oficial que reconhece e regulamenta a existência do Grupo Escolar Silva Jardim e sua importância para a educação paulista.
+        </li>
+        <li>
+          <strong>Relatos de ex-alunos e professores</strong> – Depoimentos coletados especialmente para o centenário.<br>
+          Histórias, memórias e experiências compartilhadas por quem viveu a escola, disponíveis nas redes sociais e arquivos internos.
+        </li>
+        <li>
+          <strong>Documentos oficiais digitalizados</strong> – Certificado de Fundação, Anuários, Recortes de Jornal.<br>
+          Arquivos históricos preservados e digitalizados, acessíveis na seção Documentos e Arquivos Históricos deste site.
+        </li>
+        <li>
+      <strong>Imagens históricas</strong> – Acervo da escola, arquivos públicos e redes sociais.<br>
+          Fotografias antigas e atuais que ilustram a trajetória da escola e de sua comunidade.
+        </li>
+        <li>
+          <strong>Dados educacionais</strong> – IDEB, IDESP, Secretaria da Educação do Estado de São Paulo.<br>
+          
+          Indicadores oficiais de desempenho e qualidade do ensino, utilizados para contextualizar a evolução da escola.
+        </li>
+      </ul>
+      <p style="margin-top:18px; color:#444; font-size:1rem;">
+        Esta bibliografia reúne fontes históricas, acadêmicas e relatos pessoais, garantindo a credibilidade e a riqueza das informações apresentadas. Caso queira contribuir com novas fontes ou correções, entre em contato com a equipe do site.
+      </p>
+    </div>
+  </div>
+</section>
+      </div>
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários</title>
+    <style>
+   body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #0e1a2b;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    background: #1c2d44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    background-color: #243b55;
+    border: 1px solid #34495e;
+    border-radius: 8px;
+    color: #ecf0f1;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+.comentario {
+    background: #1c2d44;
+    border-left: 5px solid #2980b9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.nome {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+    <h2>Comentários:</h2>
+
+<!-- Formulário do Google -->
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAJQKwRlfjdgbNnM5vbmMRGDqoJlzvymVM-HdCY5Q_PSivaA/viewform?embedded=true"
+        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+        style="max-width: 640px;">Carregando…</iframe>
+</div>
+
+<!-- Link para visualizar as respostas -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAJQKwRlfjdgbNnM5vbmMRGDqoJlzvymVM-HdCY5Q_PSivaA/viewform?usp=sharing&ouid=108104861368327633413" target="_blank"
+       style="font-size: 18px; text-decoration: none; color: #eeeeee;">
+       📊 Ver respostas enviadas pelos participantes
+    </a>
+</div>
+<!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Centenário do Silva Jardim. Todos os direitos reservados.</p>
+    <div style="margin-top: 18px; text-align: center;">
+      <strong class="led-label">Desenvolvedor Do Site</strong><br>
+      <span class="led-text">
+      Gabriel Oliveira Teggi
+      </span>
+    </div>
+    <div style="margin-top: 18px; text-align: center;">
+      <strong class="led-label">Colaboradores</strong><br>
+      <span class="led-text">
+      Vinicius Almeida De Sousa
+      </span>
+      <br>
+      <strong class="led-label">Desenvolvedor Banco De Dados</strong><br>
+      <span class="led-text">
+      <span class="led-text">
+      Gustavo Divino Rodrigues Barbosa
+      </span>
+    </div>
+    <div style="margin-top: 18px; text-align: center;">
+      <strong class="led-label">Redatores De Conteúdos</strong><br>
+      <span class="led-text">
+      Elias Miranda Balestero, Pedro Henrique Ferreira Da Rocha, Igor Moreira De Araújo
+      </span>
+    </div>
+    <style>
+    .led-text {
+      color: rgb(10, 10, 10);
+      background: none;
+      padding: 0 6px;
+      border-radius: 0;
+      font-family: inherit;
+      letter-spacing: 2px;
+      font-weight: 700;
+      display: inline-block;
+      text-shadow:
+      0 0 6px rgb(244, 248, 248),
+      0 0 12px rgb(255, 255, 255),
+      0 0 18px rgb(231, 231, 238),
+      0 0 24px rgb(10, 10, 10),
+      0 0 32px rgb(255, 255, 255);
+      box-shadow: none;
+      margin: 4px 0;
+      transition: color 0.2s;
+    }
+    .led-label {
+      color: #f50505;
+      text-shadow:
+      0 0 8px rgb(252, 252, 252),
+      0 0 16px rgb(252, 252, 252),
+      0 0 24px rgb(247, 247, 248);
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: none;
+      border-radius: 0;
+      padding: 0 6px;
+      font-family: inherit;
+      display: inline-block;
+      margin: 4px 0;
+    }
+    </style>
+
+    </a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+// Script para abrir e fechar o menu de abas
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('toggleAbas');
+  const menu = document.getElementById('abasMenu');
+  let aberto = false;
+  btn.addEventListener('click', function() {
+    aberto = !aberto;
+    menu.classList.toggle('mostrar', aberto);
+    btn.textContent = aberto ? 'Fechar Todas as Abas' : 'Abrir Todas as Abas';
+  });
+});
+  </script>
+</body>
+</html>
