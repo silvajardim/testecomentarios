@@ -1126,122 +1126,150 @@ Como homenagem a seu legado, o antigo município de Capivari passou a se chamar 
  <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentários</title>
-    <style>
-   body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #0e1a2b;
-    color: #ecf0f1;
-    margin: 0;
-    padding: 30px;
-}
+     <meta charset="UTF-8">
+  <title>Formulário + Comentários Estilo YouTube</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .form-container iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+    .comments-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .comments-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .comments-table thead th {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #fafafa;
+    }
+    .comments-table tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .comments-table td {
+      vertical-align: top;
+      padding: 12px 16px;
+    }
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .comment-author {
+      color: #065fd4;
+      font-weight: 500;
+      margin-right: 8px;
+    }
+    .comment-time {
+      color: #606060;
+      font-size: 12px;
+    }
+    .comment-text {
+      margin: 4px 0 0;
+      color: #0f0f0f;
+      line-height: 1.4;
+    }
+    .comment-actions {
+      color: #606060;
+      font-size: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .comment-actions span {
+      margin-right: 16px;
+    }
+  </style>
 
-h1, h2 {
-    color: #3498db;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-form {
-    background: #1c2d44;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    background-color: #243b55;
-    border: 1px solid #34495e;
-    border-radius: 8px;
-    color: #ecf0f1;
-    resize: vertical;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-button {
-    padding: 12px 24px;
-    background-color: #2980b9;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #1abc9c;
-}
-
-.comentario {
-    background: #1c2d44;
-    border-left: 5px solid #2980b9;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
-.nome {
-    font-weight: bold;
-    color: #3498db;
-    margin-bottom: 5px;
-}
-    </style>
+  <!-- jQuery + PapaParse para CSV -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 </head>
 <body>
-    <h2>Comentários:</h2>
 
-<!-- Formulário do Google -->
-<div style="display: flex; justify-content: center;">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAJQKwRlfjdgbNnM5vbmMRGDqoJlzvymVM-HdCY5Q_PSivaA/viewform?embedded=true"
+  <!-- 1. Bloco do Google Form -->
+  <div class="form-container">
+    <!-- Substitua GOOGLE_FORM_ID pelo ID do seu formulário -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAJQKwRlfjdgbNnM5vbmMRGDqoJlzvymVM-HdCY5Q_PSivaA/viewform?usp=dialog"
+            loading="lazy"></iframe>
+  </div>
+
+  <!-- 2. Bloco de comentários (respostas) -->
+  <div class="comments-container">
+    <table class="comments-table">
+      <thead>
+        <tr>
+          <th style="width:50px;"></th>
+          <th>Comentários</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- 📘 Respostas dos participantes ao vivo -->
+<div style="display: flex; justify-content: center; margin-top: 40px;">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHHa2tXi1Wwf433q8FMAZ3xvzwoodveprNoBdqLA207jU0s_vODBrcdETr1zQPIYQpOg8hggbeTrWS/pubhtml?widget=true&headers=false"
         width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-        style="max-width: 640px;">Carregando…</iframe>
+        style="max-width: 900px;">
+        Carregando respostas…
+    </iframe>
 </div>
-
-<!-- 🔗 Link aprimorado para visualizar as respostas -->
-<div style="
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-">
-    <a href="https://docs.google.com/spreadsheets/d/1kQDuvDfQHIDjSV-4rDfz0d4uWdfzjhLvkpPcg6zN1lE/edit?usp=sharing" target="_blank"
-       style="
-           display: flex;
-           align-items: center;
-           gap: 10px;
-           background-color: #0057B8;
-           color: white;
-           padding: 16px 28px;
-           font-size: 18px;
-           font-weight: 600;
-           border-radius: 10px;
-           text-decoration: none;
-           box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-           transition: background-color 0.3s ease, transform 0.3s ease;
-       "
-       onmouseover="this.style.backgroundColor='#0044a3'; this.style.transform='scale(1.03)'"
-       onmouseout="this.style.backgroundColor='#0057B8'; this.style.transform='scale(1)'"
-    >
-        📘 <span>Ver respostas dos participantes</span>
     </a>
 </div>
+
+          const tr = $(`
+            <tr>
+              <td>
+                <img src="${avatarUrl}" class="comment-avatar">
+              </td>
+              <td>
+                <div>
+                  <span class="comment-author">${author}</span>
+                  <span class="comment-time">${timestamp}</span>
+                </div>
+                <div class="comment-text">${comment}</div>
+                <div class="comment-actions">
+                  <span>Curtir (${likes || 0})</span>
+                  <span>Responder</span>
+                </div>
+              </td>
+            </tr>
+          `);
+          $('.comments-table tbody').append(tr);
+        });
+      },
+      error: function(err) {
+        console.error('Erro ao carregar respostas:', err);
+      }
+    });
+  </script>
+
+</body>
+</html>
+
 <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Centenário do Silva Jardim. Todos os direitos reservados.</p>
